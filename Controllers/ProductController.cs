@@ -17,4 +17,9 @@ public class ProductController : Controller
     {
         return View();
     }
+
+    public IActionResult Detail(int ID)
+    {
+        return View();
+    }
 }

@@ -1,0 +1,66 @@
+@{
+    ViewData["Title"] = "Product List";
+}
+
+<div class="pt-24">
+    <div class="container xl:max-w-screen-xl lg:max-w-screen-lg px-4 mx-auto">
+        <div class="grid md:grid-cols-4 gap-10">
+            <div class="grid md:grid-cols-5 gap-10 md:col-span-3">
+                <div class="h-full md:col-span-2">
+                    <img src="https://picsum.photos/200" alt="product image"
+                        class="w-full rounded-tl-lg rounded-tr-lg sticky top-28" height="100" width="100">
+                </div>
+                <div class="h-full md:col-span-3">
+                    <div class="mb-5">
+                        <h1 class="text-xl font-bold">Nama Produk</h1>
+                        <p class="text-3xl font-medium">Rp. 151.000</p>
+                    </div>
+                    <hr class="mb-5" />
+                    <div class="space-y-4">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi tincidunt ullamcorper
+                            consectetur.
+                            In vulputate mollis lectus, id imperdiet ex commodo a. Cras bibendum pellentesque ipsum,
+                            posuere
+                            varius mi eleifend sit amet. Praesent sed dignissim tortor, eget porttitor turpis. Ut
+                            ultricies
+                            velit ac justo consectetur dignissim. Nullam hendrerit dapibus urna, vel convallis diam
+                            mattis
+                            sed. Vestibulum vel pellentesque risus. Duis sagittis lorem consequat nisl eleifend mollis.
+                            Aliquam id tempus erat. Proin quis ultricies ex.</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi tincidunt ullamcorper
+                            consectetur.
+                            In vulputate mollis lectus, id imperdiet ex commodo a. Cras bibendum pellentesque ipsum,
+                            posuere
+                            varius mi eleifend sit amet. Praesent sed dignissim tortor, eget porttitor turpis. Ut
+                            ultricies
+                            velit ac justo consectetur dignissim. Nullam hendrerit dapibus urna, vel convallis diam
+                            mattis
+                            sed. Vestibulum vel pellentesque risus. Duis sagittis lorem consequat nisl eleifend mollis.
+                            Aliquam id tempus erat. Proin quis ultricies ex.</p>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="border border-gray-200 rounded-lg shadow-md p-3 sticky top-24">
+                    <h5 class="text-lg font-medium mb-5">Atur Jumlah Pembelian</h5>
+                    <div class="flex gap-2 items-center mb-4">
+                        <img src="https://picsum.photos/200" alt="product image"
+                            class="w-10" height="100" width="100">
+                        <p>SKU Product</p>
+                    </div>
+                    <hr class="mb-4" />
+                    <div class="flex gap-2 mb-4">
+                        <input type="number" class="w-16 border border-gray-200 rounded-lg py-1 px-2" value="0" />
+                        <p>Stok: 31</p>
+                    </div>
+                    <hr class="mb-4" />
+                    <div class="flex justify-between gap-2 mb-4">
+                        <p class="text-gray-500 text-sm">Subtotal</p>
+                        <p>Rp. 150.000</p>
+                    </div>
+                    <button class="w-full px-2 py-2 rounded-full bg-yellow-500 hover:bg-yellow-600 font-medium">Masukan ke Keranjang</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
