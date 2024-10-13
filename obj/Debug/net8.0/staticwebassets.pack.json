@@ -9,8 +9,20 @@
       "PackagePath": "staticwebassets\\css\\site.css"
     },
     {
+      "Id": "C:\\Users\\Lenovo\\project\\dotnet-mvc\\wwwroot\\css\\styles.css",
+      "PackagePath": "staticwebassets\\css\\styles.css"
+    },
+    {
+      "Id": "C:\\Users\\Lenovo\\project\\dotnet-mvc\\wwwroot\\css\\tailwind.css",
+      "PackagePath": "staticwebassets\\css\\tailwind.css"
+    },
+    {
       "Id": "C:\\Users\\Lenovo\\project\\dotnet-mvc\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "C:\\Users\\Lenovo\\project\\dotnet-mvc\\wwwroot\\img\\shopping-bag-cuate-sm.png",
+      "PackagePath": "staticwebassets\\img\\shopping-bag-cuate-sm.png"
     },
     {
       "Id": "C:\\Users\\Lenovo\\project\\dotnet-mvc\\wwwroot\\js\\site.js",

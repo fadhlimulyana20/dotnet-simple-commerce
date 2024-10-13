@@ -28,3 +28,5 @@ C:\Users\Lenovo\project\dotnet-mvc\obj\Debug\net8.0\refint\dotnet-mvc.dll
 C:\Users\Lenovo\project\dotnet-mvc\obj\Debug\net8.0\dotnet-mvc.pdb
 C:\Users\Lenovo\project\dotnet-mvc\obj\Debug\net8.0\dotnet-mvc.genruntimeconfig.cache
 C:\Users\Lenovo\project\dotnet-mvc\obj\Debug\net8.0\ref\dotnet-mvc.dll
+C:\Users\Lenovo\project\dotnet-mvc\bin\Debug\net8.0\package-lock.json
+C:\Users\Lenovo\project\dotnet-mvc\bin\Debug\net8.0\package.json

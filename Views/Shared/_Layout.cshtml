@@ -1,44 +1,59 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - dotnet_mvc</title>
-    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
-    <link rel="stylesheet" href="~/dotnet_mvc.styles.css" asp-append-version="true" />
+    <title>@ViewData["Title"] - Simple Commerve</title>
+    @* <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" /> *@
+    @* <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" /> *@
+    @* <link rel="stylesheet" href="~/dotnet_mvc.styles.css" asp-append-version="true" /> *@
+    <link rel="stylesheet" href="~/css/styles.css">
 </head>
+
 <body>
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container-fluid">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">dotnet_mvc</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-                        </li>
-                    </ul>
+        <div x-data="navbar">
+            <div id="navbar-transparent-wrapper"
+                class="fixed left-0 top-0 z-40 w-full transition-all duration-300 bg-white shadow-md">
+                <div
+                    class="flex container mx-auto xl:max-w-screen-xl lg:max-w-screen-lg justify-between items-center px-4 py-2">
+                    <a href="/">
+                        <h5 class="text-xl font-bold">Simple</h5>
+                        <h5 class="text-xl font-bold">Commerce</h5>
+                    </a>
+                    <!-- Navbar links for larger screens -->
+                    <div id="nav-wrapper" class="hidden lg:flex gap-x-4 font-medium text-gray-700">
+                        <a href=""
+                            class=" text-green-700 font-medium hover:text-green-400">
+                            Product
+                        </a>
+                        <a href=""
+                            class=" text-green-700 font-medium hover:text-green-400">
+                            Chart
+                        </a>
+                    </div>  
                 </div>
             </div>
-        </nav>
+        </div>
     </header>
-    <div class="container">
+    <div class="min-h-screen">
         <main role="main" class="pb-3">
             @RenderBody()
         </main>
     </div>
 
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2024 - dotnet_mvc - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+    <footer class="bg-gray-800">
+        <div class="container xl:max-w-screen-xl lg:max-w-screen-lg px-4 mx-auto py-10">
+            <div class="grid lg:grid-cols-6 grid-cols-2 gap-2">
+                <div class="col-span-2">
+                    <div class="text-yellow-200 text-xl font-bold">
+                        <h5 class="mb-0">Simple</h5>
+                        <h5>Commerce</h5>
+                    </div>
+                    <p class="text-white">Offering top-quality products at unbeatable prices.</p>
+                </div>
+            </div
         </div>
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
@@ -46,4 +61,5 @@
     <script src="~/js/site.js" asp-append-version="true"></script>
     @await RenderSectionAsync("Scripts", required: false)
 </body>
+
 </html>

@@ -1,8 +1,18 @@
 /** @type {import('tailwindcss').Config} */
+
+const defaultTheme = require("tailwindcss/defaultTheme");
+
 module.exports = {
-  content: [],
+  content: [
+    './Pages/**/*.cshtml',
+    './Views/**/*.cshtml'
+  ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        'sans': ['"Rubik"', ...defaultTheme.fontFamily.sans],
+      }
+    },
   },
   plugins: [],
 }

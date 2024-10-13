@@ -2,7 +2,21 @@
     ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<div class="pt-24 bg-yellow-200">
+    <div class="container xl:max-w-screen-xl lg:max-w-screen-lg px-4 mx-auto">
+        <div class="grid md:grid-cols-2 gap-4 items-center">
+            <div>
+                <div class="mb-5 text-gray-800">
+                    <h1 class="text-3xl font-bold">Welcome to Simple Store</h1>
+                    <p>Discover and shop for the products you love, now with exclusive discounts and promotions. Don’t miss out, grab yours today!</p>
+                </div>
+                <a href="/product" class="px-4 py-2 font-medium text-lg rounded-full bg-gray-800 hover:bg-gray-900 text-white">
+                    Find Product
+                </a>
+            </div>
+            <div>
+                <img src="~/img/shopping-bag-cuate-sm.png" alt="simple e-commerce" width="400" height="400" class="mx-auto">
+            </div>
+        </div>
+    </div>
 </div>
