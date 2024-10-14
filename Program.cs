@@ -1,7 +1,13 @@
+using dotnet_mvc.Data;
+using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
+builder.Services.AddDbContext<DotnetMvcContext>(options =>
+    options.UseNpgsql(builder.Configuration.GetConnectionString("CommerceDB")));
 
 var app = builder.Build();
 
