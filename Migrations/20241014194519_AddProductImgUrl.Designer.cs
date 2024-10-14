@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 using dotnet_mvc.Data;
@@ -11,9 +12,11 @@ using dotnet_mvc.Data;
 namespace dotnet_mvc.Migrations
 {
     [DbContext(typeof(DotnetMvcContext))]
-    partial class DotnetMvcContextModelSnapshot : ModelSnapshot
+    [Migration("20241014194519_AddProductImgUrl")]
+    partial class AddProductImgUrl
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

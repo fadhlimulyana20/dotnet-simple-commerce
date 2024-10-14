@@ -1,71 +1,28 @@
+@model IEnumerable<dotnet_mvc.Models.Product>
+
 @{
     ViewData["Title"] = "Product List";
 }
 
-<div class="pt-24">
+<div class="pt-24 mb-20">
     <div class="container xl:max-w-screen-xl lg:max-w-screen-lg px-4 mx-auto">
         <h1 class="text-3xl font-bold text-gray-800 mb-10">Product List</h1>
         <div class="grid lg:grid-cols-6 md:grid-cols-3 grid-cols-2 gap-3">
-            <div class="border border-gray-200 rounded-lg shadow-md bg-white hover:bg-yellow-100 cursor-pointer h-full">
-                <div class="mb-3">
-                    <img src="https://picsum.photos/200" alt="product image"
-                        class="w-full h-54 rounded-tl-lg rounded-tr-lg" height="100" width="100">
+            @foreach (var product in Model)
+            {
+            <a href="/product/detail/@product.Id">
+                <div class="border border-gray-200 rounded-lg shadow-md bg-white hover:bg-yellow-100 cursor-pointer h-full">
+                    <div class="mb-3">
+                        <img src="@product.ImgUrl" alt="@product.Name"
+                            class="object-cover h-48 w-96 rounded-tl-lg rounded-tr-lg" height="100" width="100">
+                    </div>
+                    <div class="px-3 pb-2">
+                        <h5 class="mb-0">@product.Name</h5>
+                        <p class="text-md font-bold">Rp. @product.Price</p>
+                    </div>
                 </div>
-                <div class="px-3 pb-2">
-                    <h5 class="mb-0">Nama Produk</h5>
-                    <p class="text-md font-bold">Rp. 150.000</p>
-                </div>
-            </div>
-            <div class="border border-gray-200 rounded-lg shadow-md bg-white hover:bg-yellow-100 cursor-pointer h-full">
-                <div class="mb-3">
-                    <img src="https://picsum.photos/200" alt="product image"
-                        class="w-full h-54 rounded-tl-lg rounded-tr-lg" height="100" width="100">
-                </div>
-                <div class="px-3 pb-2">
-                    <h5 class="mb-0">Nama Produk Produk Produk Produk Produk Produk</h5>
-                    <p class="text-md font-bold">Rp. 150.000</p>
-                </div>
-            </div>
-               <div class="border border-gray-200 rounded-lg shadow-md bg-white hover:bg-yellow-100 cursor-pointer h-full">
-                <div class="mb-3">
-                    <img src="https://picsum.photos/200" alt="product image"
-                        class="w-full h-54 rounded-tl-lg rounded-tr-lg" height="100" width="100">
-                </div>
-                <div class="px-3 pb-2">
-                    <h5 class="mb-0">Nama Produk</h5>
-                    <p class="text-md font-bold">Rp. 150.000</p>
-                </div>
-            </div>
-               <div class="border border-gray-200 rounded-lg shadow-md bg-white hover:bg-yellow-100 cursor-pointer h-full">
-                <div class="mb-3">
-                    <img src="https://picsum.photos/200" alt="product image"
-                        class="w-full h-54 rounded-tl-lg rounded-tr-lg" height="100" width="100">
-                </div>
-                <div class="px-3 pb-2">
-                    <h5 class="mb-0">Nama Produk</h5>
-                    <p class="text-md font-bold">Rp. 150.000</p>
-                </div>
-            </div>
-               <div class="border border-gray-200 rounded-lg shadow-md bg-white hover:bg-yellow-100 cursor-pointer h-full">
-                <div class="mb-3">
-                    <img src="https://picsum.photos/200" alt="product image"
-                        class="w-full h-54 rounded-tl-lg rounded-tr-lg" height="100" width="100">
-                </div>
-                <div class="px-3 pb-2">
-                    <h5 class="mb-0">Nama Produk</h5>
-                    <p class="text-md font-bold">Rp. 150.000</p>
-                </div>
-            </div>
-               <div class="border border-gray-200 rounded-lg shadow-md bg-white hover:bg-yellow-100 cursor-pointer h-full">
-                <div class="mb-3">
-                    <img src="https://picsum.photos/200" alt="product image"
-                        class="w-full h-54 rounded-tl-lg rounded-tr-lg" height="100" width="100">
-                </div>
-                <div class="px-3 pb-2">
-                    <h5 class="mb-0">Nama Produk</h5>
-                    <p class="text-md font-bold">Rp. 150.000</p>
-                </div>
-            </div>
+            </a>
+            }
         </div>
     </div>
 </div>

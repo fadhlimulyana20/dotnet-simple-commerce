@@ -1,5 +1,6 @@
 using dotnet_mvc.Data;
 using Microsoft.EntityFrameworkCore;
+using dotnet_mvc.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -10,6 +11,15 @@ builder.Services.AddDbContext<DotnetMvcContext>(options =>
     options.UseNpgsql(builder.Configuration.GetConnectionString("CommerceDB")));
 
 var app = builder.Build();
+
+AppContext.SetSwitch("Npgsql.EnableLegacyTimestampBehavior", true);
+
+using (var scope = app.Services.CreateScope())
+{
+    var services = scope.ServiceProvider;
+
+    SeedData.Initialize(services);
+}
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
