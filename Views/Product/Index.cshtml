@@ -18,7 +18,7 @@
                     </div>
                     <div class="px-3 pb-2">
                         <h5 class="mb-0">@product.Name</h5>
-                        <p class="text-md font-bold">Rp. @product.Price</p>
+                        <p class="text-md font-bold product-price"> @product.Price</p>
                     </div>
                 </div>
             </a>
@@ -26,3 +26,17 @@
         </div>
     </div>
 </div>
+
+<script>
+    function numberSeperator(x) {
+        return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+    }
+
+    $(document).ready(function () {
+        $(".product-price").each(function () {
+            var number = $(this).text()
+            number = numberSeperator(number)
+            $(this).text(`Rp. ${number}`)
+        })
+    });
+</script>

@@ -34,12 +34,12 @@
                             Product
                         </a>
                         <a asp-controller="Cart" asp-action="Index" class=" text-green-700 font-medium hover:text-green-400">
-                            Chart
+                            Cart
                         </a>
                         @if (User.Identity.IsAuthenticated)
                         {
-                            <a href="" class=" text-green-700 font-medium hover:text-green-400">
-                                @User.Identity.Name
+                            <a href="#" class=" text-green-700 font-medium hover:text-green-400">
+                                Hi, @User.Identity.Name
                             </a>
                             <form asp-controller="Auth" asp-action="Logout" method="post" class="navbar-right">
                                 <button type="submit" class="btn btn-link">Logout</button>
