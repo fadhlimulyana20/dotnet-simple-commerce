@@ -30,10 +30,10 @@
                     </a>
                     <!-- Navbar links for larger screens -->
                     <div id="nav-wrapper" class="hidden lg:flex gap-x-4 font-medium text-gray-700">
-                        <a href="" class=" text-green-700 font-medium hover:text-green-400">
+                        <a asp-controller="Product" asp-action="Index" class="text-green-700 font-medium hover:text-green-400">
                             Product
                         </a>
-                        <a href="" class=" text-green-700 font-medium hover:text-green-400">
+                        <a asp-controller="Cart" asp-action="Index" class=" text-green-700 font-medium hover:text-green-400">
                             Chart
                         </a>
                         @if (User.Identity.IsAuthenticated)

@@ -17,6 +17,7 @@ namespace dotnet_mvc.Data
         }
 
         public DbSet<Product> Product { get; set; }
+        public DbSet<Cart> Carts { get; set; }
 
         public override int SaveChanges()
         {
