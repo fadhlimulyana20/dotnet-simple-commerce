@@ -1,6 +1,7 @@
 using dotnet_mvc.Data;
 using Microsoft.EntityFrameworkCore;
 using dotnet_mvc.Models;
+using Microsoft.AspNetCore.Identity;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -9,6 +10,16 @@ builder.Services.AddControllersWithViews();
 
 builder.Services.AddDbContext<DotnetMvcContext>(options =>
     options.UseNpgsql(builder.Configuration.GetConnectionString("CommerceDB")));
+
+builder.Services.AddIdentity<IdentityUser, IdentityRole>()
+    .AddEntityFrameworkStores<DotnetMvcContext>()
+    .AddDefaultTokenProviders();
+
+builder.Services.ConfigureApplicationCookie(options =>
+{
+    options.LoginPath = "/auth/Login";
+    options.AccessDeniedPath = "/auth/AccessDenied";
+});
 
 var app = builder.Build();
 

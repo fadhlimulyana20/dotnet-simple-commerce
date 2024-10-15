@@ -2,12 +2,14 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using dotnet_mvc.Models;
+using Microsoft.AspNetCore.Identity;
 
 namespace dotnet_mvc.Data
 {
-    public class DotnetMvcContext : DbContext
+    public class DotnetMvcContext : IdentityDbContext<IdentityUser>
     {
         public DotnetMvcContext(DbContextOptions<DotnetMvcContext> options)
             : base(options)

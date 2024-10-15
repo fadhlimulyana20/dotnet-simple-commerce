@@ -1,4 +1,6 @@
-﻿<!DOCTYPE html>
+﻿@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -10,6 +12,9 @@
     @* <link rel="stylesheet" href="~/dotnet_mvc.styles.css" asp-append-version="true" /> *@
     <link rel="stylesheet" href="~/css/styles.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+    <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+
 </head>
 
 <body>
@@ -25,15 +30,26 @@
                     </a>
                     <!-- Navbar links for larger screens -->
                     <div id="nav-wrapper" class="hidden lg:flex gap-x-4 font-medium text-gray-700">
-                        <a href=""
-                            class=" text-green-700 font-medium hover:text-green-400">
+                        <a href="" class=" text-green-700 font-medium hover:text-green-400">
                             Product
                         </a>
-                        <a href=""
-                            class=" text-green-700 font-medium hover:text-green-400">
+                        <a href="" class=" text-green-700 font-medium hover:text-green-400">
                             Chart
                         </a>
-                    </div>  
+                        @if (User.Identity.IsAuthenticated)
+                        {
+                            <a href="" class=" text-green-700 font-medium hover:text-green-400">
+                                @User.Identity.Name
+                            </a>
+                            <form asp-controller="Auth" asp-action="Logout" method="post" class="navbar-right">
+                                <button type="submit" class="btn btn-link">Logout</button>
+                            </form>
+                        }
+                        else
+                        {
+                            <a asp-controller="Auth" asp-action="Login" class="btn btn-link navbar-right">Login</a>
+                        }
+                    </div>
                 </div>
             </div>
         </div>
@@ -54,8 +70,7 @@
                     </div>
                     <p class="text-white">Offering top-quality products at unbeatable prices.</p>
                 </div>
-            </div
-        </div>
+            </div </div>
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
