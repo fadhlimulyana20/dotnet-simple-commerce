@@ -23,6 +23,11 @@ namespace dotnet_mvc.Controllers {
         public async Task<IActionResult> Index()
         {
             var user = await _userManager.GetUserAsync(User);
+            if (user == null) 
+            {
+                return RedirectToAction("Login", "Auth"); // Redirect to login page if not logged in
+            }
+
             var cartItems = _context.Carts
                 .Where(c => c.UserId == user.Id)
                 .Select(c => new CartItemViewModel

@@ -27,7 +27,7 @@
                 <div class="border border-gray-200 rounded-lg shadow-md p-4 sticky top-24">
                     <h5 class="text-lg font-medium mb-5">Pembelian</h5>
                     <div class="flex gap-2 items-center mb-4">
-                        <img src="https://picsum.photos/200" alt="product image" class="w-10" height="100" width="100">
+                        <img src="@Model.ImgUrl" alt="product image" class="w-10" height="100" width="100">
                         <p>@Model.Sku</p>
                     </div>
                     @* <hr class="mb-4" />
@@ -45,14 +45,14 @@
                         <form asp-action="AddToCart" method="post" asp-controller="Cart">
                             <input type="hidden" name="productId" value="@Model.Id" />
                             <button type="submit" class="w-full px-2 py-2 rounded-full bg-yellow-500 hover:bg-yellow-600 font-medium">
-                                Masukan ke Keranjang
+                                Add to Cart
                             </button>
                         </form>
                     }
                     else
                     {
                         <button disabled class="w-full px-2 py-2 rounded-full bg-gray-400 font-medium">
-                            Login untuk Masukan ke Keranjang
+                            Login to Add To Cart
                         </button>
                     }
                 </div>
