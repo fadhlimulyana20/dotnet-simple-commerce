@@ -16,6 +16,7 @@ Using Docker
 ```sh
 docker compose up
 ```
+open at http://localhost:5500
 Using local dotnet CLI
 ```sh
 dotnet ef database up
